@@ -1,0 +1,6 @@
+pyaudio
+sounddevice
+numpy
+scipy
+flask
+flask-cors

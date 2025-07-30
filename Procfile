@@ -1,0 +1,1 @@
+web: cd src/backend && python api_server.py 

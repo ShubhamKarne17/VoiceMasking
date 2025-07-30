@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/frontend/voice-masking-ui/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "https://your-backend-url.onrender.com/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/src/frontend/voice-masking-ui/$1"
+    }
+  ],
+  "env": {
+    "REACT_APP_API_URL": "https://your-backend-url.onrender.com"
+  }
+} 
